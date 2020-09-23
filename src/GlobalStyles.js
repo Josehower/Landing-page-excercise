@@ -1,4 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
+
+export const colors = {
+  yellow: '#fdd231',
+  grey: '#12121280',
+  white: '#f2f2f2',
+  whiteLight: '#f2f2f280',
+};
 
 const GlobalStyle = createGlobalStyle`
 
@@ -38,6 +45,15 @@ body::-webkit-scrollbar-thumb {
 h1, h2,h3{
   font-weight: 700;
 }
+
+h2,h3{
+  font-size: 44.8px;
+}
+`;
+
+export const marginStyles = css`
+  width: 1056px;
+  margin: 0 auto;
 `;
 
 export default GlobalStyle;

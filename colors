@@ -35,3 +35,53 @@ ulysses.svg
 vscode.svg
 wave.svg
 webflow.svg
+
+const images = [
+  airtable,
+  adobex,
+  bear,
+  bear,
+  chrome,
+  evernote,
+  finder,
+  firefox,
+  gmail,
+  googledocs,
+  iawriter,
+  macos,
+  name,
+  photoshop,
+  producthuntratings,
+  safari,
+  sketch,
+  slack,
+  spotify,
+  sublimetext,
+  superhuman,
+  things,
+  todoist,
+  transmit,
+  trello,
+  ulysses,
+  vscode,
+  wave,
+  webflow,
+];
+
+import name from './images/imagesGrid/name.svg';
+import photoshop from './images/imagesGrid/photoshop.svg';
+import producthuntratings from './images/imagesGrid/producthuntratings.svg';
+import safari from './images/imagesGrid/safari.svg';
+import sketch from './images/imagesGrid/sketch.svg';
+import slack from './images/imagesGrid/slack.svg';
+import spotify from './images/imagesGrid/spotify.svg';
+import sublimetext from './images/imagesGrid/sublimetext.svg';
+import superhuman from './images/imagesGrid/superhuman.svg';
+import things from './images/imagesGrid/things.svg';
+import todoist from './images/imagesGrid/todoist.svg';
+import transmit from './images/imagesGrid/transmit.svg';
+import trello from './images/imagesGrid/trello.svg';
+import ulysses from './images/imagesGrid/ulysses.svg';
+import vscode from './images/imagesGrid/vscode.svg';
+import wave from './images/imagesGrid/wave.svg';
+import webflow from './images/imagesGrid/webflow.svg';
