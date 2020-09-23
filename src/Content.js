@@ -15,6 +15,68 @@ import thomaschretien from './images/thomaschretien.jpg';
 import macButton from './images/macButton.png';
 import setappButton from './images/setappButton.png';
 import redBanner from './images/redBanner.png';
+import airtable from './images/imagesGrid/airtable.svg';
+import adobex from './images/imagesGrid/adobex.svg';
+import bear from './images/imagesGrid/bear.svg';
+import chrome from './images/imagesGrid/chrome.svg';
+import evernote from './images/imagesGrid/evernote.svg';
+import finder from './images/imagesGrid/finder.svg';
+import firefox from './images/imagesGrid/firefox.svg';
+import gmail from './images/imagesGrid/gmail.svg';
+import googledocs from './images/imagesGrid/googledocs.svg';
+import iawriter from './images/imagesGrid/iawriter.svg';
+import macos from './images/imagesGrid/macos.svg';
+import name from './images/imagesGrid/name.svg';
+import photoshop from './images/imagesGrid/photoshop.svg';
+import producthuntratings from './images/imagesGrid/producthuntratings.svg';
+import safari from './images/imagesGrid/safari.svg';
+import sketch from './images/imagesGrid/sketch.svg';
+import slack from './images/imagesGrid/slack.svg';
+import spotify from './images/imagesGrid/spotify.svg';
+import sublimetext from './images/imagesGrid/sublimetext.svg';
+import superhuman from './images/imagesGrid/superhuman.svg';
+import things from './images/imagesGrid/things.svg';
+import todoist from './images/imagesGrid/todoist.svg';
+import transmit from './images/imagesGrid/transmit.svg';
+import trello from './images/imagesGrid/trello.svg';
+import ulysses from './images/imagesGrid/ulysses.svg';
+import vscode from './images/imagesGrid/vscode.svg';
+import wave from './images/imagesGrid/wave.svg';
+import webflow from './images/imagesGrid/webflow.svg';
+
+const images = [
+  airtable,
+  adobex,
+  bear,
+  bear,
+  chrome,
+  evernote,
+  finder,
+  firefox,
+  gmail,
+  googledocs,
+  iawriter,
+  macos,
+  name,
+  photoshop,
+  producthuntratings,
+  safari,
+  sketch,
+  slack,
+  spotify,
+  sublimetext,
+  superhuman,
+  things,
+  todoist,
+  transmit,
+  trello,
+  ulysses,
+  vscode,
+  wave,
+  webflow,
+];
+
+console.log(images);
 
 const ScrollRight = styled.div`
   background: transparent;
@@ -188,7 +250,7 @@ const Section3 = styled.section`
     border-radius: 19px;
   }
 
-  div {
+  > div {
     width: 960px;
     margin: 0 auto;
     display: flex;
@@ -214,10 +276,30 @@ const Section3 = styled.section`
     width: 336px;
     height: 238px;
     border-radius: 19px;
-    display: block;
-    background: #f2f2f250;
-    text-align: center;
+
     color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    gap: 5px;
+
+    div {
+      width: 72px;
+      height: 72px;
+      background: rgba(242, 242, 242, 0.1);
+      border-radius: 20%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      width: 43.33px;
+      height: 43.33px;
+    }
   }
 `;
 
@@ -392,6 +474,20 @@ const Faq = styled.section`
 
   h3 {
     font-size: 20.8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+  }
+
+  .triangle {
+    transform: scale(0.65);
+    fill: rgba(242, 242, 242, 0.5);
   }
 `;
 
@@ -615,7 +711,44 @@ const Content = () => {
             Cover the basics with shortcuts for macOS or let your fingers fly in
             one of the 28 apps and tools you already love.
           </p>
-          <div className="imagesGrid">THIS IS A GRID WITH IMAGES</div>
+          <div className="imagesGrid">
+            <div>
+              <img src={airtable} alt="" />
+            </div>
+            <div>
+              <img src={adobex} alt="" />
+            </div>
+            <div>
+              <img src={transmit} alt="" />
+            </div>
+            <div>
+              <img src={bear} alt="" />
+            </div>
+            <div>
+              <img src={chrome} alt="" />
+            </div>
+            <div>
+              <img src={evernote} alt="" />
+            </div>
+            <div>
+              <img src={finder} alt="" />
+            </div>
+            <div>
+              <img src={firefox} alt="" />
+            </div>
+            <div>
+              <img src={gmail} alt="" />
+            </div>
+            <div>
+              <img src={googledocs} alt="" />
+            </div>
+            <div>
+              <img src={iawriter} alt="" />
+            </div>
+            <div>
+              <img src={macos} alt="" />
+            </div>
+          </div>
         </div>
       </Section3>
       <Features>
@@ -725,16 +858,112 @@ const Content = () => {
       </YellowBanner>
       <Faq>
         <h2>FAQ</h2>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
-        <h3>Is there a list of supported apps?&nbsp; &nbsp; &nabla;</h3>
+        <h3>
+          Is there a list of supported apps?{' '}
+          <svg>
+            <path
+              className="triangle"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.93934 7.93934C5.52513 7.35355 6.47487 7.35355 7.06066 7.93934L12 12.8787L16.9393 7.93934C17.5251 7.35355 18.4749 7.35355 19.0607 7.93934C19.6464 8.52513 19.6464 9.47487 19.0607 10.0607L13.0607 16.0607C12.4749 16.6464 11.5251 16.6464 10.9393 16.0607L4.93934 10.0607C4.35355 9.47487 4.35355 8.52513 4.93934 7.93934Z"
+              fill="white"
+            ></path>
+          </svg>
+        </h3>
+        <h3>
+          I can’t find my favorite app. Will you update Mouseless?
+          <svg>
+            <path
+              className="triangle"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.93934 7.93934C5.52513 7.35355 6.47487 7.35355 7.06066 7.93934L12 12.8787L16.9393 7.93934C17.5251 7.35355 18.4749 7.35355 19.0607 7.93934C19.6464 8.52513 19.6464 9.47487 19.0607 10.0607L13.0607 16.0607C12.4749 16.6464 11.5251 16.6464 10.9393 16.0607L4.93934 10.0607C4.35355 9.47487 4.35355 8.52513 4.93934 7.93934Z"
+              fill="white"
+            ></path>
+          </svg>
+        </h3>
+        <h3>
+          Do you offer a trial?
+          <svg>
+            <path
+              className="triangle"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.93934 7.93934C5.52513 7.35355 6.47487 7.35355 7.06066 7.93934L12 12.8787L16.9393 7.93934C17.5251 7.35355 18.4749 7.35355 19.0607 7.93934C19.6464 8.52513 19.6464 9.47487 19.0607 10.0607L13.0607 16.0607C12.4749 16.6464 11.5251 16.6464 10.9393 16.0607L4.93934 10.0607C4.35355 9.47487 4.35355 8.52513 4.93934 7.93934Z"
+              fill="white"
+            ></path>
+          </svg>
+        </h3>
+        <h3>
+          Can I ditch my mouse for good?
+          <svg>
+            <path
+              className="triangle"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.93934 7.93934C5.52513 7.35355 6.47487 7.35355 7.06066 7.93934L12 12.8787L16.9393 7.93934C17.5251 7.35355 18.4749 7.35355 19.0607 7.93934C19.6464 8.52513 19.6464 9.47487 19.0607 10.0607L13.0607 16.0607C12.4749 16.6464 11.5251 16.6464 10.9393 16.0607L4.93934 10.0607C4.35355 9.47487 4.35355 8.52513 4.93934 7.93934Z"
+              fill="white"
+            ></path>
+          </svg>
+        </h3>
+        <h3>
+          The menubar app doesn’t work. What can I do?
+          <svg>
+            <path
+              className="triangle"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.93934 7.93934C5.52513 7.35355 6.47487 7.35355 7.06066 7.93934L12 12.8787L16.9393 7.93934C17.5251 7.35355 18.4749 7.35355 19.0607 7.93934C19.6464 8.52513 19.6464 9.47487 19.0607 10.0607L13.0607 16.0607C12.4749 16.6464 11.5251 16.6464 10.9393 16.0607L4.93934 10.0607C4.35355 9.47487 4.35355 8.52513 4.93934 7.93934Z"
+              fill="white"
+            ></path>
+          </svg>
+        </h3>
+        <h3>
+          How long does it take before I see results?
+          <svg>
+            <path
+              className="triangle"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.93934 7.93934C5.52513 7.35355 6.47487 7.35355 7.06066 7.93934L12 12.8787L16.9393 7.93934C17.5251 7.35355 18.4749 7.35355 19.0607 7.93934C19.6464 8.52513 19.6464 9.47487 19.0607 10.0607L13.0607 16.0607C12.4749 16.6464 11.5251 16.6464 10.9393 16.0607L4.93934 10.0607C4.35355 9.47487 4.35355 8.52513 4.93934 7.93934Z"
+              fill="white"
+            ></path>
+          </svg>
+        </h3>
+        <h3>
+          Is there a Windows app?
+          <svg>
+            <path
+              className="triangle"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.93934 7.93934C5.52513 7.35355 6.47487 7.35355 7.06066 7.93934L12 12.8787L16.9393 7.93934C17.5251 7.35355 18.4749 7.35355 19.0607 7.93934C19.6464 8.52513 19.6464 9.47487 19.0607 10.0607L13.0607 16.0607C12.4749 16.6464 11.5251 16.6464 10.9393 16.0607L4.93934 10.0607C4.35355 9.47487 4.35355 8.52513 4.93934 7.93934Z"
+              fill="white"
+            ></path>
+          </svg>
+        </h3>
+        <h3>
+          My country’s keyboard layout is not supported. Now what?
+          <svg>
+            <path
+              className="triangle"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.93934 7.93934C5.52513 7.35355 6.47487 7.35355 7.06066 7.93934L12 12.8787L16.9393 7.93934C17.5251 7.35355 18.4749 7.35355 19.0607 7.93934C19.6464 8.52513 19.6464 9.47487 19.0607 10.0607L13.0607 16.0607C12.4749 16.6464 11.5251 16.6464 10.9393 16.0607L4.93934 10.0607C4.35355 9.47487 4.35355 8.52513 4.93934 7.93934Z"
+            ></path>
+          </svg>
+        </h3>
+        <h3>
+          Something’s wrong. How do I get in touch?
+          <svg>
+            <path
+              className="triangle"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.93934 7.93934C5.52513 7.35355 6.47487 7.35355 7.06066 7.93934L12 12.8787L16.9393 7.93934C17.5251 7.35355 18.4749 7.35355 19.0607 7.93934C19.6464 8.52513 19.6464 9.47487 19.0607 10.0607L13.0607 16.0607C12.4749 16.6464 11.5251 16.6464 10.9393 16.0607L4.93934 10.0607C4.35355 9.47487 4.35355 8.52513 4.93934 7.93934Z"
+            ></path>
+          </svg>
+        </h3>
       </Faq>
       <Download>
         <h2>Download</h2>
