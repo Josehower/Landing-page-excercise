@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import { colors } from '../GlobalStyles';
 
@@ -37,6 +37,7 @@ const TimerButton = styled.button`
   border: solid transparent 3px;
   transition: all 0.2s;
   line-height: 18px;
+  cursor: pointer;
 
   &:hover {
     border: solid black 3px;
@@ -63,20 +64,51 @@ const ItalicP = styled.p`
 `;
 
 const Timer = () => {
+  const [timer, setTimer] = useState('');
+  const date = new Date();
+  const targetDate =
+    +new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate() + 1,
+      date.getHours() + 4,
+    ) + 18000000;
+
+  const getDifference = useCallback(() => {
+    const timeUntilBirtDay = targetDate - Date.now();
+    const milliseconds = timeUntilBirtDay;
+    const seconds = Math.floor(milliseconds / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    // const days = hours -(Math.floor(hours / 24) * 24);
+    setTimer([
+      days,
+      hours - days * 24,
+      minutes - hours * 60,
+      seconds - minutes * 60,
+    ]);
+  }, [targetDate]);
+
+  useEffect(() => {
+    getDifference();
+    setInterval(() => getDifference(), 1000);
+  }, [getDifference]);
+
   return (
     <>
       <Div>
         <div>
-          <span>00</span> Days
+          <span>{timer?.[0] ? timer?.[0] : 0}</span> Days
         </div>
         <div>
-          <span>08</span> Hrs
+          <span>{timer?.[1] ? timer?.[1] : 0}</span> Hrs
         </div>
         <div>
-          <span>58</span> Mins
+          <span>{timer?.[2] ? timer?.[2] : 0}</span> Mins
         </div>
         <div>
-          <span>28</span> Secs
+          <span>{timer?.[3] ? timer?.[3] : 0}</span> Secs
         </div>
         <TimerButton>
           Buy for

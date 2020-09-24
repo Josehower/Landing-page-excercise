@@ -272,28 +272,10 @@ const Faq = styled.section`
   display: grid;
   padding: 140px 48px;
   grid-template-columns: 1fr 1fr;
-  gap: 2em;
+  gap: 1em;
 
   h2 {
     grid-column: span 2;
-  }
-
-  h3 {
-    font-size: 20.8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  svg {
-    width: 20px;
-    height: 20px;
-    margin-left: 20px;
-  }
-
-  .triangle {
-    transform: scale(0.65);
-    fill: rgba(242, 242, 242, 0.5);
   }
 `;
 
@@ -321,6 +303,7 @@ const RedBanner = styled.a`
   border-radius: 20px;
   text-decoration: none;
   color: #000;
+  overflow: hidden;
 
   div {
     padding: 40px 32px;
@@ -334,6 +317,13 @@ const RedBanner = styled.a`
   img {
     width: 384px;
     border-radius: 0 20px 20px 0;
+    transition: all 0.6s;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.07);
+    }
   }
 `;
 
@@ -392,7 +382,7 @@ const Footer = styled.footer`
     border-radius: 9px;
     height: 45.5px;
     display: flex;
-    padding: 6.4px;
+    padding: 4px;
 
     input::placeholder {
       color: rgba(242, 242, 242, 0.3);
@@ -404,14 +394,29 @@ const Footer = styled.footer`
       flex-grow: 1;
       background-color: rgba(0, 0, 0, 0);
       border: none;
+      color: ${colors.white};
     }
+
+    input:focus {
+      outline: none;
+    }
+
     button {
       width: 96px;
+      height: 33px;
       font-size: 14.4px;
       font-weight: 600;
-      border-radius: 9px;
-      border: solid transparent 2px;
+      border-radius: 6px;
+      padding: 6px 12px;
+      border: none;
+      cursor: pointer;
     }
+    border: solid transparent 2px;
+    transition: 0.4s;
+  }
+
+  form:focus-within {
+    border: solid rgba(242, 242, 242, 0.2) 2px;
   }
 `;
 
@@ -559,35 +564,113 @@ const Content = () => {
       </YellowBanner>
       <Faq>
         <h2>FAQ</h2>
-        <Accordion />
-        <h3>
-          Do you offer a trial?
-          {downArrow}
-        </h3>
-        <h3>
-          Can I ditch my mouse for good?
-          {downArrow}
-        </h3>
-        <h3>
-          The menubar app doesn’t work. What can I do?
-          {downArrow}
-        </h3>
-        <h3>
-          How long does it take before I see results?
-          {downArrow}
-        </h3>
-        <h3>
-          Is there a Windows app?
-          {downArrow}
-        </h3>
-        <h3>
-          My country’s keyboard layout is not supported. Now what?
-          {downArrow}
-        </h3>
-        <h3>
-          Something’s wrong. How do I get in touch?
-          {downArrow}
-        </h3>
+        <Accordion>
+          <div>
+            <h3>Is there a list of supported apps?</h3>
+            {downArrow}{' '}
+          </div>
+
+          <p>
+            Mouseless comes with exercises for Xcode, Webflow, Code, Ulysses,
+            Trello, Transmit, Todoist, Things, Superhuman, Sublime Text,
+            Spotify, Slack, Sketch, Safari, Photoshop, Notion, macOS, iA Writer,
+            Google Docs, Gmail, Firefox, Finder, Figma, Evernote, Google Chrome,
+            Bear, Airtable, Adobe XD. <br /> However, the menu bar dropdown
+            supports every app that is currently open.
+          </p>
+        </Accordion>
+        <Accordion>
+          <div>
+            <h3>Do you offer a trial? </h3>
+            {downArrow}{' '}
+          </div>
+          <p>
+            We didn’t implement a trial yet, but no worries—feel free to
+            purchase the app. If you’re not happy send a short message. We’ll
+            refund your order.
+            <br />
+            By the way, we’re part of the SetApp catalogue and they offer a free
+            trial for 7 days. They give you access to 170+ apps, including
+            Mouseless.
+          </p>
+        </Accordion>
+        <Accordion>
+          <div>
+            <h3>Can I ditch my mouse for good? </h3>
+            {downArrow}{' '}
+          </div>
+          <p>
+            Nooo! Mouseless is not about getting rid of your mouse—you’ll always
+            need it! But you’ll spend less time with mouse clicking.
+          </p>
+        </Accordion>
+        <Accordion>
+          <div>
+            <h3>The menubar app doesn’t work. What can I do? </h3>
+            {downArrow}{' '}
+          </div>
+          <p>
+            Mouseless requires the accessibility permission in “System
+            Preferences › Security & Privacy › Privacy › Accessibility”.
+            <br />
+            For macOS 10.15 (Catalina) the screen recording permission in
+            “System Preferences › Security & Privacy › Privacy › Screen
+            Recording” is required too. Don’t worry—we don’t record your screen.
+          </p>
+        </Accordion>
+        <Accordion>
+          <div>
+            <h3>How long does it take before I see results? </h3>
+            {downArrow}{' '}
+          </div>
+          <p>
+            The amount of keyboard shortcuts for each app or tool varies, so
+            there cannot possibly be a general answer to that. Of course,
+            individual learning behavior affects the result as well.
+            <br />
+            Try to establish a daily study routine, put your knowledge into
+            practice, and you should see results rather quickly.
+          </p>
+        </Accordion>
+        <Accordion>
+          <div>
+            <h3>Is there a Windows app? </h3>
+            {downArrow}{' '}
+          </div>
+          <p>
+            Nope, not for now. But give us a shout and we’ll consider it.
+            <br />
+            Something’s wrong. How do I get in touch? Drop us a line, we’ll be
+            happy to help!
+          </p>
+        </Accordion>
+        <Accordion>
+          <div>
+            <h3>My country’s keyboard layout is not supported. Now what?</h3>
+            {downArrow}{' '}
+          </div>
+          <p>
+            Send us more details, please. As of now, Mouseless does not support
+            every single keyboard layout known to man, but hey: goals!
+          </p>
+        </Accordion>
+        <Accordion>
+          <div>
+            <h3>Something’s wrong. How do I get in touch? </h3>
+            {downArrow}{' '}
+          </div>
+          <p>Drop us a line, we’ll be happy to help!</p>
+        </Accordion>
+        <Accordion>
+          <div>
+            <h3>I can’t find my favorite app. Will you update Mouseless?</h3>{' '}
+            {downArrow}{' '}
+          </div>
+          <p>
+            Sure, we have set up a public feedback board to gather app requests.
+            Submit all the apps you miss or any other ideas you might have.
+          </p>
+        </Accordion>
       </Faq>
       <Download>
         <h2>Download</h2>
