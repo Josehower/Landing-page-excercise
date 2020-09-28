@@ -1,7 +1,7 @@
 import React from 'react';
-import Timer from './Timer';
-import { marginStyles, colors } from '../GlobalStyles';
 import styled from 'styled-components';
+import { marginStyles, colors } from '../GlobalStyles';
+import Timer from './Timer';
 
 const Section = styled.section`
   background-color: ${colors.yellow};

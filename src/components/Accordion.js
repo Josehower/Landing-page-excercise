@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { colors } from '../GlobalStyles';
 import styled from 'styled-components';
+
 const Button = styled.button`
   background-color: transparent;
   color: white;

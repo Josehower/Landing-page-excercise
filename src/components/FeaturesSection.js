@@ -1,9 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
+import { colors, marginStyles } from '../GlobalStyles';
 import { feature1 } from '../OtherModules/FeatureIcon1';
 import { feature2 } from '../OtherModules/FeatureIcon2';
 import { feature3 } from '../OtherModules/FeatureIcon3';
-import styled from 'styled-components';
-import { colors, marginStyles } from '../GlobalStyles';
 
 const Features = styled.section`
   ${marginStyles}

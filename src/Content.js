@@ -1,7 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 import { colors, marginStyles } from './GlobalStyles';
 import { downArrow } from './OtherModules/DownArrow';
 import Timer from './components/Timer';
+import FeaturesSection from './components/FeaturesSection';
 import Accordion from './components/Accordion';
 import Section1 from './components/Section1';
 import logo from './images/logo.png';
@@ -9,9 +11,6 @@ import logoBig from './images/logobig.png';
 import mousless from './images/mousless-cloud.svg';
 import keyboard from './images/sec3Keyboard.png';
 import videoSec2 from './videos/video-sec2.mp4';
-import sec3Video from './videos/sec3Video.mp4';
-import videoSection5 from './videos/videoSection5.mp4';
-import styled from 'styled-components';
 import transitionYellow from './images/transition-yellow.svg';
 import blobBubble from './images/blob.svg';
 import brain from './images/brain.e35e32e7.svg';
@@ -32,7 +31,8 @@ import googledocs from './images/imagesGrid/googledocs.svg';
 import iawriter from './images/imagesGrid/iawriter.svg';
 import macos from './images/imagesGrid/macos.svg';
 import transmit from './images/imagesGrid/transmit.svg';
-import FeaturesSection from './components/FeaturesSection';
+import sec3Video from './videos/sec3Video.mp4';
+import videoSection5 from './videos/videoSection5.mp4';
 
 const Header = styled.header`
   background-color: ${colors.yellow};
